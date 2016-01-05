@@ -3,27 +3,15 @@ require_once("vendor/autoload.php");
 
 class Tinypng
 {
-    /**
-     * An instance of the CI super object.
-     *
-     * @access private
-     *
-     * @var object
-     */
-    private $ci;
-
-    // ------------------------------------------------------------------------
 
     /**
-     * Load dependacies and sets CI major object.
+     * Set Tiny API Key
      *
      * @return void
      */
-    function __construct()
+    function __construct($api_key)
     {
-        \Tinify\setKey(TINIFY_API_KEY);
-
-        $this->ci =& get_instance();
+        \Tinify\setKey($api_key);
     }
 	
 	function tinify_image($filepath) {
