@@ -11,11 +11,11 @@ class Tinypng
      */
     function __construct($api_key)
     {
-        \Tinify\setKey($api_key);
+      \Tinify\setKey($api_key);
     }
-	
-	function tinify_image($filepath) {
-		$source = \Tinify\fromFile($filepath);
-		$source->toFile($filepath);
-	}
+
+    function tinify_image($filepath) {
+      $source = \Tinify\fromFile($filepath);
+      $source->toFile($filepath);
+    }
 }
